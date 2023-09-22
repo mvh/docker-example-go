@@ -30,7 +30,8 @@ func usage() {
 
 var (
 	now      = time.Now()
-	nowstr   = now.Format(time.RFC1123)
+	nowstr   = "How soon is now?"
+	// nowstr   = now.Format(time.RFC1123)
 	greeting = flag.String("g", fmt.Sprintf("Built %s<br>Hello", nowstr), "Greet with `greeting`")
 	addr     = flag.String("addr", "localhost:8080", "address to serve")
 )
