@@ -5,7 +5,7 @@ WORKDIR /app
 ADD /app /app
 #RUN export BUILD_TIME=`date` && go build -o server -ldflags="-X main.nowstr=\'${BUILD_TIME}\'"
 RUN export BUILD_TIME=`date` && go build -o server -ldflags "-X \"main.nowstr=${BUILD_TIME}\""
-#RUN go build -o server
+# RUN go build -o server
 
 FROM alpine:3.18
 #FROM ubuntu:latest
